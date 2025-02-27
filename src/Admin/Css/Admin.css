@@ -35,6 +35,14 @@
   text-align: center;
   margin-top: 0;
   line-height: 1.5;
+  margin-bottom: 0;
+}
+.Admin-container .text p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-top: 15px;
 }
 .Admin-container .btn-d {
   display: flex;

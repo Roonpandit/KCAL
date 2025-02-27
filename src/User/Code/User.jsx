@@ -39,6 +39,7 @@ function User() {
         setLoading(false);
       });
   }, [user]);
+  
 
   useEffect(() => {
     if (!user || !user.email) return;

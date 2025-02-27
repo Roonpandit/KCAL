@@ -1,93 +1,71 @@
-/* General styling for the Dish form */
-.dish-container {
-  margin: auto;
-  font-family: "Helvetica Neue", Arial, sans-serif;
-  background-color: rgba(255, 255, 255, 0.9); /* Slight opacity */
+.ingredient-list-container {
   padding: 10px;
-  margin-top: 80px;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  color: #333;
-  overflow: hidden;
-  position: relative; /* Ensure proper stacking */
-  z-index: 10; /* Stack above other elements */
-  left: 1%;
-  right: 1%;
-}
-
-.dish-container h2 {
   text-align: center;
-  color: black;
-  margin-top: 10px;
-  font-family: "Times New Roman", Times, serif;
-  padding: 10px;
-}
-
-.dish-container .dish-form {
-  max-width: 600px;
-  padding: 25px;
-  background-color: #fff;
+  background-color: white;
+  position: relative;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
-.dish-container .dish-form div {
+.ingredient-list-container h1{
   margin-bottom: 10px;
 }
-
-.dish-container .dish-form label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-  color: black;
+.ingredient-list-container .btns {
+  background-color: #08316e;
+  font-size: 15px;
+  color: white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 0px;
+}
+.ingredient-list-container .btn-edit {
+  background-color: #b28228;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+.ingredient-list-container .btn-delete {
+  background-color: #bf4d06;
+  color: white;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+.ingredient-list-container .filters {
+  margin-bottom: 20px;
 }
 
-.dish-container .dish-form input[type="text"],
-.dish-container .dish-form input[type="number"],
-.dish-container .dish-form select {
+.ingredient-list-container .filters select {
+  padding: 5px;
+  margin-right: 5px;
+}
+
+.ingredient-list-container .dish-table {
   width: 100%;
+  border: 1px solid #000;
+  border-collapse: collapse;
+  overflow-x: auto;
+}
+
+.ingredient-list-container .dish-table th,
+.dish-table td {
   padding: 10px;
-  margin: 5px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  font-size: 16px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+.ingredient-list-container .dish-table th {
+  background-color: #f2f2f2;
+}
+
+.ingredient-list-container .dish-table tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-.dish-container .dish-form input[type="text"]:focus,
-.dish-container .dish-form input[type="number"]:focus,
-.dish-container .dish-form select:focus {
-  border-color: #3f63d0;
-  background-color: #e8effd;
-  outline: none;
+.ingredient-list-container .error {
+  color: red;
 }
 
-.dish-container .dish-form button {
-  width: 100%;
-  padding: 12px;
-  font-size: 16px;
-  font-weight: bold;
-  background-color:  #b28228;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-.dish-container .dish-form button:hover {
-  background-color: #875d11;
-}
 
-.dish-container .dish-form button:focus {
-  outline: none;
-}
-
-.dish-container .dish-form option {
-  font-size: 16px;
-}
-.dish-container .close-button {
+.ingredient-list-container .close-button {
   background-color: transparent;
   color: black;
   font-size: 30px;
@@ -96,34 +74,173 @@
   padding: 0;
   position: absolute;
   top: 5px;
-  right: 10px;
+  right: 15px;
 }
 
-.dish-container .close-button:hover {
+.ingredient-list-container .close-button:hover {
   color: #d32f2f;
 }
 
-.dish-container .close-button:focus {
+.ingredient-list-container .close-button:focus {
   outline: none;
 }
 
+.ingredient-list-container .pagination {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.ingredient-list-container .pagination .bttns {
+  background-color: #4caf50;
+  color: white;
+  border-radius: 4px;
+  padding: 2px 10px;
+}
+
+.ingredient-list-container .pagination .bttns:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Popup Modal */
+.ingredient-list-container .popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.5);
+
+  border-radius: 8px;
+}
+
+.ingredient-list-container .popup-content {
+  background: white;
+  padding: 20px;
+  width: 90%;
+  max-width: 500px;
+  min-width: 150px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
 
 
-/* Responsive Design */
-@media (max-width: 600px) {
-  .dish-container .dish-form {
-    padding: 15px;
+.ingredient-list-container .popup-content h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.ingredient-list-container .popup-content label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.ingredient-list-container .popup-content input,
+.ingredient-list-container .popup-content select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.ingredient-list-container .popup-btn {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+.ingredient-list-container .popup-btn button{
+padding: 5px 10px;
+background-color: #0a3aa2;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+font-size: 16px;
+transition: background-color 0.3s ease;
+}
+@media screen and (max-width: 768px) {
+  .ingredient-list-container .dish-table {
+    font-size: 12px;
   }
 
-  .dish-container .dish-form input[type="text"],
-  .dish-container .dish-form input[type="number"],
-  .dish-container .dish-form select {
-    font-size: 14px;
-    padding: 8px;
+  .ingredient-list-container .dish-table th,
+  .ingredient-list-container .dish-table td {
+    padding: 5px;
   }
 
-  .dish-container .dish-form button {
-    font-size: 14px;
-    padding: 10px;
+  .ingredient-list-container .filters {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ingredient-list-container .filters select {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+  .ingredient-list-container .btns {
+    font-size: smaller;
+    padding: 1px 7px;
+    width: 100%;
+  }
+  .ingredient-list-container .btn-edit,
+  .ingredient-list-container .btn-delete {
+    font-size: smaller;
+    padding: 1px 7px;
+  }
+  .ingredient-list-container .pagination .bttns {
+    font-size: 12px;
+    padding: 1px 7px;
+  }
+  .ingredient-list-container .pagination span {
+    font-size: smaller;
+  }
+  .ingredient-list-container .filters select {
+    font-size: 12px;
+    padding: 1px 7px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .ingredient-list-container .dish-table {
+    font-size: 10px;
+  }
+
+  .ingredient-list-container .dish-table th,
+  .ingredient-list-container .dish-table td {
+    padding: 2px;
+  }
+  .ingredient-list-container {
+    width: 100%;
+  }
+  .ingredient-list-container .btns,
+  .ingredient-list-container .btn-edit,
+  .ingredient-list-container .btn-delete {
+    font-size: smaller;
+    padding: 1px 5px;
+  }
+  .ingredient-list-container .pagination .bttns {
+    font-size: 10px;
+    padding: 1px 5px;
+  }
+  .ingredient-list-container .filters select {
+    font-size: 10px;
+    padding: 1px 7px;
+  }
+  .ingredient-list-container .popup-content {
+    margin-left: 30px;
+    margin-right: 30px;
   }
 }

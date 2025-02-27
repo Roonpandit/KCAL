@@ -8,7 +8,8 @@ function DishList() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const [dishData, setDishData] = useState([]);
-  const [filteredDishData, setFilteredDishData] = useState([]);
+  const [filteredIngredients, setFilteredIngredients] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("");
@@ -21,8 +22,6 @@ function DishList() {
     "https://projects-b8a50-default-rtdb.asia-southeast1.firebasedatabase.app/DishScanner/Dish.json";
   const userDishApiUrl =
     "https://projects-b8a50-default-rtdb.asia-southeast1.firebasedatabase.app/DishScanner/UserDiet-Data.json";
-  const loginApiUrl =
-    "https://projects-b8a50-default-rtdb.asia-southeast1.firebasedatabase.app/DishScanner/LogIn.json";
 
   useEffect(() => {
     if (!user || !user.email) {
@@ -32,45 +31,40 @@ function DishList() {
 
     setLoading(true);
 
-    // Fetch dish data
     axios
       .get(dishApiUrl)
       .then((response) => {
-        const fetchedData = Object.values(response.data || {});
+        const fetchedData = Object.values(response.data || []);
+        fetchedData.sort((a, b) => a.food_item.localeCompare(b.food_item));
         setDishData(fetchedData);
-        setFilteredDishData(fetchedData); // Initially show all dishes
-        setLoading(false);
+        setFilteredIngredients(fetchedData); // Show all dishes initially
       })
-      .catch(() => {
-        setError("Failed to fetch data");
-        setLoading(false);
-      });
+      .catch(() => setError("Failed to fetch data"))
+      .finally(() => setLoading(false));
   }, [user]);
 
   const handleCategoryChange = (event) => {
-    const category = event.target.value;
-    setSelectedCategory(category);
-    filterData(category, selectedType);
+    setSelectedCategory(event.target.value);
+    filterData(event.target.value, selectedType);
   };
 
   const handleTypeChange = (event) => {
-    const type = event.target.value;
-    setSelectedType(type);
-    filterData(selectedCategory, type);
+    setSelectedType(event.target.value);
+    filterData(selectedCategory, event.target.value);
   };
 
   const filterData = (category, type) => {
-    let filteredData = dishData;
+    let filteredData = Array.isArray(dishData) ? [...dishData] : [];
 
     if (category) {
       filteredData = filteredData.filter((dish) => dish.category === category);
     }
-
     if (type) {
       filteredData = filteredData.filter((dish) => dish.type === type);
     }
 
-    setFilteredDishData(filteredData);
+    setFilteredIngredients(filteredData);
+    setCurrentPage(1);
   };
 
   const handleAddButtonClick = (dish) => {
@@ -92,7 +86,7 @@ function DishList() {
       const newUserDish = {
         ...selectedDish,
         selectedDate,
-        email:user.email
+        email: user.email,
       };
 
       axios
@@ -103,9 +97,7 @@ function DishList() {
           setSelectedDate("");
           setSelectedDish(null);
         })
-        .catch(() => {
-          alert("Failed to add Ingredient to your diet.");
-        });
+        .catch(() => alert("Failed to add Ingredient to your diet."));
     } else {
       alert("Please select a date to start your Diet.");
     }
@@ -114,6 +106,13 @@ function DishList() {
   const handleCloseButtonClick = () => {
     navigate("/User");
   };
+
+  const ingredientsPerPage = 10;
+  const totalPages = Math.ceil((filteredIngredients?.length || 0) / ingredientsPerPage);
+  const displayedIngredients = filteredIngredients.slice(
+    (currentPage - 1) * ingredientsPerPage,
+    currentPage * ingredientsPerPage
+  );
 
   return (
     <div className="dish-list-container">
@@ -159,7 +158,7 @@ function DishList() {
           </tr>
         </thead>
         <tbody>
-          {filteredDishData.map((dish, index) => (
+          {displayedIngredients.map((dish, index) => (
             <tr key={index}>
               <td>{dish.food_item}</td>
               <td>{dish.calories}</td>
@@ -167,10 +166,7 @@ function DishList() {
               <td>{dish.type}</td>
               <td>{dish.quantity}</td>
               <td>
-                <button
-                  className="btns"
-                  onClick={() => handleAddButtonClick(dish)}
-                >
+                <button className="btns" onClick={() => handleAddButtonClick(dish)}>
                   Add
                 </button>
               </td>
@@ -184,10 +180,7 @@ function DishList() {
           <h2>Select Date to start Your Diet</h2>
           <input type="date" value={selectedDate} onChange={handleDateChange} />
           <div className="button-container">
-            <button
-              className="cancel-button"
-              onClick={() => setShowCalendar(false)}
-            >
+            <button className="cancel-button" onClick={() => setShowCalendar(false)}>
               Cancel
             </button>
             <button className="submit-button" onClick={handleSubmit}>
@@ -196,6 +189,24 @@ function DishList() {
           </div>
         </div>
       )}
+
+      <div className="pagination">
+        <button className="bttns"
+          disabled={currentPage === 1}
+          onClick={() => setCurrentPage(currentPage - 1)}
+        >
+          Previous
+        </button>
+        <span>
+          Page {currentPage} of {totalPages}
+        </span>
+        <button className="bttns"
+          disabled={currentPage >= totalPages || totalPages === 0}
+          onClick={() => setCurrentPage(currentPage + 1)}
+        >
+          Next
+        </button>
+      </div>
     </div>
   );
 }
