@@ -1,0 +1,100 @@
+/* Form.css */
+.Combo {
+    position: relative; /* Use fixed or absolute if needed */
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    font-family: 'Times New Roman', Times, serif;
+    left: 1%;
+    right: 1%;
+    z-index: 9999; 
+}
+
+
+.Combo h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.Combo form > div {
+    margin-bottom: 5px;
+}
+
+.Combo label {
+    display: block;
+    margin-bottom: 0px;
+    font-weight: bold;
+    color: black;
+}
+
+.Combo input[type="text"],
+.Combo input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 8px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+.Combo .bttns {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; /* Add space between buttons */
+}
+
+.Combo .bttns button {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #b28228;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.Combo .bttns button:hover {
+    background-color: #875d11;
+}
+
+.Combo .bttns button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+.Combo .item {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px dashed #ccc;
+    border-radius: 4px;
+    background-color: #fefefe;
+}
+
+.Combo .close-button {
+    background-color: transparent;
+    color: black;
+    font-size: 30px;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+  }
+  
+  .Combo .close-button:hover {
+    color: #d32f2f;
+  }
+  
+  .Combo .close-button:focus {
+    outline: none;
+  }
+  

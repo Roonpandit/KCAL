@@ -1,0 +1,50 @@
+.Nav_1-middle .Nav_1 {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 0px;
+  gap: 5px;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.Nav_1-middle .Nav_1 span {
+  margin-right: 1px;
+}
+
+.Nav_1-middle .Nav_1 a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Nav_1-middle .Nav_1 .logout {
+  transition: transform 0.3s ease, color 0.3s ease;
+  background-color: #b40f0f;
+  color: white;
+  border: none;
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5px 10px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.Nav_1-middle .Nav_1 .logout:hover {
+  background-color: #4b0404;
+}
+
+.Nav_1-middle .Nav_1 .profile-image {
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}

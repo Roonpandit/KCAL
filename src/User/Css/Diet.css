@@ -1,0 +1,268 @@
+.User-container {
+  background-image: url("../../assets/bg-3.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.User-container .user-profile {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 20px;
+  min-width: 50%;
+  border-radius: 8px;
+  margin-top: 100px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 10;
+}
+
+.User-container .user-profile h3 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 0px;
+}
+/* Default styles */
+.User-container .user-profile .profile-details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.User-container .user-profile .profile-left,
+.User-container .user-profile .profile-right {
+  list-style-type: none;
+  padding: 0;
+  width: 48%;
+}
+
+.User-container .user-profile .profile-left li,
+.User-container .user-profile .profile-right li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid black;
+}
+
+.User-container .user-profile ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.User-container .user-profile li {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.User-container .user-profile li strong {
+  color: black;
+}
+
+.User-container .user-profile .bttns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+
+.User-container .user-profile .update-btn,
+.User-container .user-profile .password-btn {
+  padding: 10px 20px;
+  background-color: #ce9f47;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.User-container .user-profile .update-btn:hover,
+.User-container .user-profile .password-btn:hover {
+  background-color: #b28228;
+}
+
+.User-container .edit-profile {
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  min-width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.User-container .edit-profile .form-group-container {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.User-container .edit-profile .form-group {
+  width: 48%;
+}
+
+.User-container .edit-profile .form-group label {
+  display: block;
+  font-weight: bold;
+}
+
+.User-container .edit-profile .form-group input,
+.User-container .edit-profile .form-group select {
+  width: 70%;
+  padding: 8px;
+  margin-top: 5px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+.User-container .edit-profile .form-buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.User-container .edit-profile .btn-1,
+.User-container .edit-profile .btn-2 {
+  padding: 10px 20px;
+  border: none;
+  background-color: #ce9f47;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.User-container .edit-profile .btn-1:hover,
+.User-container .edit-profile .btn-2:hover {
+  background-color: #b28228;
+}
+
+.User-container .edit-profile .btn-2 {
+  background-color: #f44336;
+}
+
+.User-container .edit-profile .btn-2:hover {
+  background-color: #c62828;
+}
+
+.User-container .change-password {
+  background-color: #f8f8f8;
+  padding: 20px;
+  border-radius: 8px;
+  min-width: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 0px;
+}
+.User-container .change-password h3 {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: black;
+  font-size: 1.5rem;
+  margin-top: 0px;
+}
+.User-container .change-password .form-group {
+  margin-bottom: 5px;
+}
+
+.User-container .change-password .form-group label {
+  display: block;
+  margin-bottom: 0px;
+  font-weight: bold;
+  color: #333;
+}
+
+.User-container .change-password .form-group input {
+  width: 100%;
+  padding: 5px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.User-container .change-password .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.User-container .change-password .btn-1,
+.User-container .change-password .btn-2 {
+  background-color: #ce9f47;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-right: 10px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.User-container .change-password .btn-2 {
+  background-color: #f44336;
+}
+
+.User-container .change-password .btn-1:hover {
+  background-color: #b28228;
+}
+
+.User-container .change-password .btn-2:hover {
+  background-color: #e53935;
+}
+
+.error {
+  color: red;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+
+
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .User-container .user-profile .profile-details {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .User-container .user-profile .profile-left,
+  .User-container .user-profile .profile-right {
+    width: 100%; /* Full width for both sections */
+    margin: 0; /* Remove any margin */
+    padding: 0; /* Remove any padding */
+  }
+
+  .User-container .user-profile .bttns {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .User-container .user-profile li {
+    font-size: 0.9rem;
+  }
+}
+/* Responsive styles for very small screens */
+@media (max-width: 480px) {
+  .User-container .user-profile li {
+    font-size: 0.8rem;
+  }
+
+  .User-container .user-profile .bttns {
+    flex-direction: column;
+    gap: 5px;
+  }
+.User-container .user-profile .update-btn,
+.User-container .user-profile .password-btn {
+font-size: 10px;
+}
+}

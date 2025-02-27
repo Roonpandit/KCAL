@@ -1,0 +1,141 @@
+.profile-box {
+position: relative;
+z-index: 10;
+}
+.profile-box .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+.profile-box .text h1 {
+  font-family: Apple Chancery, cursive;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  color: #b28228;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 0px;
+  line-height: 1;
+}
+.profile-box .text h2 {
+  font-family: Apple Chancery, cursive;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  color: #b28228;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.profile-box .text p {
+  font-family: "Times New Roman", Times, serif;
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  margin-top: 15px;
+}
+
+.profile-box .diet-container {
+  margin: auto;
+  align-items: center;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight opacity */
+  padding: 15px 15px;
+  margin-top: 0px;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  overflow: hidden;
+}
+
+.profile-box .diet-container .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  margin-bottom: 40px;
+}
+.profile-box .diet-container h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2.5rem;
+}
+.profile-box .diet-container .DishList {
+  padding: 12px 20px;
+  background-color: #b28228;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.profile-box .diet-container .DishList:hover {
+  background-color: #875d11;
+}
+
+.profile-box .diet-container .loading-message,
+.profile-box .error-message {
+  color: #d9534f;
+  font-size: 16px;
+  font-weight: 600;
+}
+.profile-box .cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.profile-box .diet-container .user-data-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+
+}
+
+.profile-box .diet-container .user-data-container h1 {
+  top: 0;
+  font-size: 24px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.profile-box .diet-container .user-data-container h2 {
+  font-size: 20px;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.profile-box .diet-container .user-data-container p {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.profile-box .diet-container .user-data-container p strong {
+  color: black;
+}
+
+
+@media (max-width: 768px) {
+  .profile-box .diet-container {
+    padding: 15px;
+  }
+
+  .profile-box .diet-container .user-data-container {
+    padding: 15px;
+    width: 100%;
+  }
+
+  .profile-box .diet-container .DishList {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+
+}

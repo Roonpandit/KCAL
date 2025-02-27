@@ -1,0 +1,76 @@
+.scanner-container {
+  text-align: center;
+  padding: 10px;
+  background-color: white;
+  margin: auto;
+  max-width: 300px;
+  border-radius: 5px;
+  margin-top: 80px;
+  position: absolute;
+  z-index: 10;
+  left: 1%;
+  right: 1%;
+}
+
+.scanner-container .scanner-title {
+  font-size: 34px;
+}
+
+#reader {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+}
+
+.scanner-container .decoded-text {
+  font-size: 18px;
+  color: green;
+}
+
+.scanner-container .decoded-text a {
+  color: #007bff;
+}
+
+.scanner-container .decoded-text a:hover {
+  text-decoration: underline;
+}
+
+.scanner-container .error-text {
+  margin-top: 20px;
+  font-size: 16px;
+  color: red;
+}
+.scanner-container .scan-again-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.scanner-container .scan-again-button:hover {
+  background-color: #0056b3;
+}
+
+.scanner-container .close-button {
+  background-color: transparent;
+  color: black;
+  font-size: 25px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.scanner-container .close-button:hover {
+  color: #d32f2f;
+}
+
+.scanner-container .close-button:focus {
+  outline: none;
+}

@@ -1,0 +1,129 @@
+/* General styling for the Dish form */
+.dish-container {
+  margin: auto;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight opacity */
+  padding: 10px;
+  margin-top: 80px;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  overflow: hidden;
+  position: relative; /* Ensure proper stacking */
+  z-index: 10; /* Stack above other elements */
+  left: 1%;
+  right: 1%;
+}
+
+.dish-container h2 {
+  text-align: center;
+  color: black;
+  margin-top: 10px;
+  font-family: "Times New Roman", Times, serif;
+  padding: 10px;
+}
+
+.dish-container .dish-form {
+  max-width: 600px;
+  padding: 25px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.dish-container .dish-form div {
+  margin-bottom: 10px;
+}
+
+.dish-container .dish-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.dish-container .dish-form input[type="text"],
+.dish-container .dish-form input[type="number"],
+.dish-container .dish-form select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+}
+
+.dish-container .dish-form input[type="text"]:focus,
+.dish-container .dish-form input[type="number"]:focus,
+.dish-container .dish-form select:focus {
+  border-color: #3f63d0;
+  background-color: #e8effd;
+  outline: none;
+}
+
+.dish-container .dish-form button {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color:  #b28228;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.dish-container .dish-form button:hover {
+  background-color: #875d11;
+}
+
+.dish-container .dish-form button:focus {
+  outline: none;
+}
+
+.dish-container .dish-form option {
+  font-size: 16px;
+}
+.dish-container .close-button {
+  background-color: transparent;
+  color: black;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.dish-container .close-button:hover {
+  color: #d32f2f;
+}
+
+.dish-container .close-button:focus {
+  outline: none;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .dish-container .dish-form {
+    padding: 15px;
+  }
+
+  .dish-container .dish-form input[type="text"],
+  .dish-container .dish-form input[type="number"],
+  .dish-container .dish-form select {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .dish-container .dish-form button {
+    font-size: 14px;
+    padding: 10px;
+  }
+}

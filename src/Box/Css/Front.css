@@ -1,0 +1,314 @@
+body {
+  background-image: url("../../assets/bg-3.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+  box-sizing: border-box;
+}
+ .fronts-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+ .fronts-container h3 {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+}
+
+.fronts-container .front-button {
+  background-color: #b28228;
+  color: #1c1c1c;
+  font-family: Apple Chancery, cursive;
+  height: 40px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: larger;
+  text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.3);
+  box-shadow: 0 4px 8px rgba(222, 222, 222, 0.228);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.fronts-container .front-button:hover {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.658);
+  font-size: large;
+  transition: all 0.3s ease;
+}
+
+.fronts .profile-image {
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}
+
+.fronts {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  gap: 20px;
+  background-color: transparent;
+  z-index: 5;
+}
+.fronts span {
+  margin-right: 1px;
+}
+
+.fronts a {
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+
+.front-middle{
+  position: absolute;
+  z-index: 10;
+  left: 1%;
+  right: 1%;
+  margin-top: 80px;
+}
+.front-middle .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 0px;
+}
+.front-middle .text h1 {
+  font-family: Apple Chancery, cursive;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  color: #b28228;
+  font-size: 5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  line-height: 1;
+  margin-top: 0px;
+}
+.front-middle .text h2 {
+  font-family: Apple Chancery, cursive;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 1);
+  color: #b28228;
+  font-size: 1.5rem;
+  text-align: center;
+  margin-top: 0;
+  line-height: 1.5;
+  margin-bottom: 50px;
+}
+.front-middle .btn-d {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.front-middle .btn-d button {
+  background-color: #b28228;
+  color: #1c1c1c;
+  font-family: Apple Chancery, cursive;
+  height: 40px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: larger;
+  text-shadow: 2px 2px 4px rgba(255, 252, 252, 0.3);
+  box-shadow: 0 4px 8px rgba(222, 222, 222, 0.228);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.front-middle .btn-d button:hover {
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.658);
+  font-size: large;
+  transition: all 0.3s ease;
+}
+
+
+
+@media (max-width: 768px) {
+  .front-middle .form-container {
+    position: absolute; /* Position relative for positioning */
+    top: 100px; /* Adjust the distance from the top */
+    right: 20px; /* Adjust the distance from the right */
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    z-index: 1000; /* Ensure it appears above other elements */
+  }
+  .front-middle .form-group input,
+  .front-middle .form-group select,
+  .front-middle .form-button {
+    font-size: 0.9rem; /* Smaller font size for inputs and buttons */
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+
+  .front-middle .form-container h2 {
+    font-size: 1.5rem; /* Adjust heading size */
+  }
+
+  .front-middle .close-button {
+    font-size: 18px; /* Slightly smaller close button */
+  }
+}
+
+.front-middle .form-container {
+  position: absolute; /* Position relative for positioning */
+  top: 0px; /* Adjust the distance from the top */
+  right: 20px; /* Adjust the distance from the right */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.front-middle .form-container h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+/* Form Group Styling */
+.front-middle .form-group {
+  margin-bottom: 5px;
+}
+
+.front-middle .form-group label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.front-middle .form-group input,
+.front-middle .form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+/* Button Styles */
+.front-middle .form-button {
+  width: 100%;
+  background-color: #b28228;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.front-middle .form-button:hover {
+  background-color: #875d11;
+}
+
+/* Link Text Styles */
+.front-middle .link-text {
+  color: #b28228;
+  cursor: pointer;
+}
+
+.front-middle .link-text:hover {
+  text-decoration: underline;
+}
+
+/* Close Button Styling */
+.front-middle .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.front-middle .close-button:hover {
+  color: #ff0000; /* Change color on hover */
+}
+
+
+
+
+.front-middle .main-box {
+  text-align: center;
+  padding: 2px;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+.front-middle .headline {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.front-middle .cards-box {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.front-middle .card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 2rem;
+}
+
+.front-middle .card:hover {
+  transform: translateY(-10px);
+}
+
+.front-middle .card-image {
+  width: 150px;
+  height: 100px;
+  margin-bottom: 1px;
+}
+
+.front-middle .card-title {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  color: #333;
+}
+
+.front-middle .card-description {
+  font-size: 1rem;
+  color: #666;
+}

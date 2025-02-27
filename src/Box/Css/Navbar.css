@@ -1,0 +1,33 @@
+.Navbar {
+  color: white;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 1px;
+  gap: 5px;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.Navbar span {
+  margin-right: 10px;
+}
+.Navbar a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 20px;
+  font-weight: bold;
+  transition: color 0.3s ease;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Navbar .profile-image {
+  width: 100px;
+  height: 70px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.2s ease-in-out;
+}

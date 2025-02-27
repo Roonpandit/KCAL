@@ -1,0 +1,103 @@
+/* About.css */
+.about-container {
+  position: relative;
+  z-index: 10;
+  padding: 20px;
+  margin: 80px auto;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-container h1 {
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 2rem;
+}
+
+.about-container .about-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 20px;
+}
+
+.about-container .about-section-title {
+  font-size: 1.5rem;
+  color: black;
+  margin-top: 30px;
+  border-bottom: 2px solid black;
+  padding-bottom: 5px;
+  margin-bottom: 15px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.about-container .about-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 15px;
+}
+
+.about-container .about-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.about-container .about-list li {
+  font-size: 1.1rem;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.about-container .about-list li strong {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+}
+
+.about-container .close-button {
+  background-color: transparent;
+  color: black;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+.about-container .close-button:hover {
+  color: #d32f2f;
+}
+
+.about-container .close-button:focus {
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 15px;
+  }
+
+  .about-container .about-title {
+    font-size: 1.8rem;
+  }
+
+  .about-container .about-section-title {
+    font-size: 1.4rem;
+  }
+
+  .about-container .about-text,
+  .about-container .about-list li {
+    font-size: 1rem;
+  }
+
+  .about-container .close-button {
+    font-size: 25px;
+    margin-right: 1px;
+  }
+}

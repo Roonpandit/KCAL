@@ -1,0 +1,76 @@
+.Nav_2 {
+    color: white; 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right: 10px;
+    gap: 15px;
+    background-color: transparent;
+    z-index: 10;
+  }
+  
+  .Nav_2 span {
+    margin-right: 15px;
+    
+  }
+  
+  .Nav_2 a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s ease; 
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+
+  .Nav_2 .logout {
+    transition: transform 0.3s ease, color 0.3s ease;
+    background-color: #b40f0f;
+    color: white;
+    border: none;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;    padding: 5px 10px;
+    font-weight: bold;
+    border-radius: 5px;
+  
+  }
+  
+  .Nav_2 .logout:hover {
+    background-color: #4b0404;
+  }
+
+  .Nav_2 .profile-logo{
+    display: flex;
+    align-items: center;
+    transition: transform 0.2s ease-in-out;
+  }
+  .Nav_2 .profile-logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+  }
+  .Nav_2 .profile-logo:hover {
+    transform: scale(1.1); /* Slight zoom effect on hover */
+  }
+  
+  
+  .Nav_2 .profile-image {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    border-radius: 50%; /* Makes the image circular */
+    cursor: pointer;
+    object-fit: cover; /* Ensures the image scales well */
+  }
+  .Nav_2 .username{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 5px;
+    transition: color 0.3s ease; 
+    font-family: Arial, Helvetica, sans-serif;
+  }

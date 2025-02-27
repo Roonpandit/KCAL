@@ -1,0 +1,186 @@
+.dish-detail {
+  margin: auto;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight opacity */
+  padding: 30px;
+  margin-top: 80px;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: #333;
+  overflow: hidden;
+  background-image: url("../../assets/Bg-5.webp");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative; /* Ensure proper stacking */
+  z-index: 10; /* Stack above other elements */
+}
+.dish-detail .note {
+  font-family: Apple Chancery, cursive;
+  text-align: center;
+  margin-top: 180px;
+}
+.dish-detail .note h1 {
+  margin-top: 182px;
+  color: white;
+  margin-bottom: 0;
+  text-align: center;
+}
+.dish-detail .note p {
+  color: white;
+  line-height: 1.5;
+  margin-top: 0;
+}
+
+.dish-detail h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 10px;
+}
+
+.dish-detail .ingredient-box {
+  background-color: #f8f9fa;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.dish-detail .ingredient-item {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.4;
+}
+.dish-detail .ingredient-item strong {
+  color: black;
+}
+
+.dish-detail .ingredient-item input {
+  width: 50px;
+  margin: auto;
+  padding: 2px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.dish-detail .bttns {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-top: 20px;
+}
+
+.dish-detail .bttns button {
+  padding: 10px 20px;
+  background-color: #b28228;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.dish-detail .bttns button:hover {
+  background-color: #875d11;
+}
+.dish-detail .total-calories p {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 15px;
+  color: #333;
+}
+
+.dish-detail .note {
+  font-size: 16px;
+  color: #777;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.error,
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #ff4d4d;
+  margin-top: 50px;
+}
+
+.error button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.error button:hover {
+  background-color: #0056b3;
+}
+
+.loading {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+
+.dish-detail .close-button {
+  background-color: transparent;
+  color: white;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  position: absolute;
+  top: 5px;
+  right: 15px;
+}
+
+.dish-detail .close-button:hover {
+  color: #d32f2f;
+}
+
+.dish-detail .close-button:focus {
+  outline: none;
+}
+@media (max-width: 768px) {
+  .dish-detail {
+    padding: 20px;
+  }
+  .dish-detail .note {
+    font-size: 12px;
+  }
+  .dish-detail h1 {
+    font-size: 30px;
+  }
+
+  .dish-detail h2 {
+    font-size: 20px;
+  }
+
+  .dish-detail .ingredient-item {
+    padding: 12px;
+  }
+
+  .dish-detail .ingredient-item div {
+    font-size: 14px;
+  }
+
+  .dish-detail .bttns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dish-detail .bttns button {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .dish-detail .ingredient-item input {
+    width: 80px;
+  }
+}
