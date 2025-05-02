@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import "../Css/Dish.css";
+import "../Css/Ingredients.css";
 
 function Ingredients() {
   const navigate = useNavigate();

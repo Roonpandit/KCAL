@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
-import "../Css/Diet.css";
+import "../Css/Profile.css";
 import Nav_2 from "./Nav_2";
 import { useAuth } from "../../Box/Code/AuthContext";
 
-const Diet = () => {
+const Profile = () => {
   const { user } = useAuth();
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -352,4 +352,4 @@ const Diet = () => {
   );
 };
 
-export default Diet;
+export default Profile;

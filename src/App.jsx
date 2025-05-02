@@ -11,11 +11,12 @@ import Contact from "./Box/Code/Contact"
 
 import Admin from './Admin/Code/Admin.jsx';
 import Combo from "./Admin/Code/Combo.jsx"
-import Dish from './Admin/Code/Dish.jsx';
+import ComboList from "./Admin/Code/ComboList.jsx"
+import Ingredients from './Admin/Code/Ingredients.jsx';
 
 import User from './User/Code/User.jsx';
-import Diet from './User/Code/Diet.jsx';
-import DishList from './User/Code/DishList.jsx';
+import Profile from './User/Code/Profile.jsx';
+import AddIngredients from './User/Code/Add-Ingredients.jsx';
 
 function ProtectedRoute({ children }) {
   const { isAuthenticated } = useAuth(); 
@@ -36,13 +37,14 @@ function App() {
 
                       {/* Admin Pages */}
         <Route path="/Admin" element={<ProtectedRoute><Admin/></ProtectedRoute>} />
-        <Route path="/Add-Combo" element={<ProtectedRoute><Combo/></ProtectedRoute>} />
-        <Route path="/Add-Dish" element={<ProtectedRoute><Dish/></ProtectedRoute>} />
+        <Route path="/Combo" element={<ProtectedRoute><Combo/></ProtectedRoute>} />
+        <Route path="/Ingredients" element={<ProtectedRoute><Ingredients/></ProtectedRoute>} />
+        <Route path="/ComboList" element={<ComboList/>} />
 
                       {/* User Pages */}
         <Route path="/User" element={<ProtectedRoute><User/></ProtectedRoute>} />
-        <Route path="/Diet" element={<ProtectedRoute><Diet/></ProtectedRoute>} />
-        <Route path="/DishList" element={<ProtectedRoute><DishList/></ProtectedRoute>} />
+        <Route path="/Profile" element={<ProtectedRoute><Profile/></ProtectedRoute>} />
+        <Route path="/Add-Ingredients" element={<ProtectedRoute><AddIngredients/></ProtectedRoute>} />
 
       </Routes>
     </>

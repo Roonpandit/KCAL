@@ -52,7 +52,7 @@ const Nav_2 = () => {
           {isAuthenticated && (
             <>
               <div className="profile-logo">
-                <Link to="/Diet">
+                <Link to="/Profile">
                   <img src={userLogo} alt="Profile" className="profile-image" />
                   <span className="username">{userName}</span>
                 </Link>

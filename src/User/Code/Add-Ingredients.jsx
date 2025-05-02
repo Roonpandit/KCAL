@@ -2,9 +2,9 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../Box/Code/AuthContext";
-import "../Css/DishList.css";
+import "../Css/Add-Ingredients.css";
 
-function DishList() {
+function AddIngredients() {
   const navigate = useNavigate();
   const { user } = useAuth();
   const [dishData, setDishData] = useState([]);
@@ -211,4 +211,4 @@ function DishList() {
   );
 }
 
-export default DishList;
+export default AddIngredients;

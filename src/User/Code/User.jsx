@@ -67,10 +67,7 @@ function User() {
   }, [user]);
 
   const handleClick = () => {
-    navigate("/DishList");
-  };
-  const handleCloseButtonClick = () => {
-    navigate("/User");
+    navigate("/Add-Ingredients");
   };
   return (
     <>

@@ -39,8 +39,8 @@ const Admin = () => {
       });
   }, [user]);
 
-  const handleIngredientsClick = () => navigate("/Add-dish");
-  const handlecomboClick = () => navigate("/Add-Combo");
+  const handleIngredientsClick = () => navigate("/Ingredients");
+  const handlecomboClick = () => navigate("/Combo");
 
   return (
     <>
